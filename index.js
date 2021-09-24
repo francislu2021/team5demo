@@ -1,9 +1,4 @@
-// var getPlaces=document.querySelector("#get-places");
-var weatherDetails = document.querySelector("#weather-details");
-var activities = document.querySelector("#activities-details");
-var x = document.getElementById("demo");
-
-
+//francis part
 //google map section
 //map search
 function initAutocomplete() {
@@ -84,17 +79,4 @@ function GetLatlong() {
             getWeather(latitude, longitude);
         }
     });
-}
-
-//to displayfor current location
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    getWeather(position.coords.latitude, position.coords.longitude);
 }
