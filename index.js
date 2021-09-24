@@ -65,22 +65,6 @@ function initAutocomplete() {
     });
 }
 
-//to get lat and long for the page for the page
-function GetLatlong() {
-    var geocoder = new google.maps.Geocoder();
-    var address = document.getElementById('pac-input').value;
-
-    geocoder.geocode({
-        'address': address
-    }, function(results, status) {
-
-        if (status == google.maps.GeocoderStatus.OK) {
-            var latitude = results[0].geometry.location.lat();
-            var longitude = results[0].geometry.location.lng();
-            getWeather(latitude, longitude);
-        }
-    });
-}
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -111,13 +95,4 @@ function showError(error) {
             x.innerHTML = "An unknown error occurred."
             break;
     }
-}
-
-//to return locaiton on map
-function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=14&size=400x300&sensor=false&key=AIzaSyAtZkNrTnJRTNM_Cuvp3OerhBJUSWcYPQQ";
-
-    document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
 }
