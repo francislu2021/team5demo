@@ -10,6 +10,7 @@
 
 <body>
     <!--main text for the page-->
+    <!--main text for the page-->
     <main id="find-place">
         <!--Search bar-->
 
@@ -17,9 +18,17 @@
             <h1 class="find">Enter your location or click on Find me to get started.</h1>
             <button class="find-btn" onclick="getLocation()">Find Me</button>
         </div>
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
-        <div id="map"></div>
+
+
+        <!--francis part-->
+        <!--geolocation displayed on map with user device location-->
+        <div id="map">
+        </div>
+        <div class="search-bar" id="find-place">
+            <input class="input" type="text" placeholder="Search" id="pac-input">
+        </div>
         <p id="demo"></p>
+
 
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtZkNrTnJRTNM_Cuvp3OerhBJUSWcYPQQ&callback=initAutocomplete&libraries=places&v=weekly" async></script>
