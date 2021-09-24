@@ -88,3 +88,26 @@ body {
 #target {
     width: 345px;
 }
+
+.search-bar {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+    padding: 55px 15px;
+}
+
+.btn {
+    background: #252525;
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 15px;
+    margin: 50px;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #a43232;
+    border: none;
+}

@@ -3,7 +3,7 @@ var weatherDetails = document.querySelector("#weather-details");
 var activities = document.querySelector("#activities-details");
 var x = document.getElementById("demo");
 
-//francis part
+
 //google map section
 //map search
 function initAutocomplete() {
@@ -93,4 +93,8 @@ function getLocation() {
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
+}
+
+function showPosition(position) {
+    getWeather(position.coords.latitude, position.coords.longitude);
 }
